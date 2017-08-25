@@ -4,7 +4,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <c:if test="${check==1 }">
 	<c:set var = "memId" value = "${id }" scope = "session"/>
-	<meta http-equiv="Refresh" content = "0;url=/logon/main.do" />
+	<meta http-equiv="Refresh" content = "0;url=./main.do" />
 </c:if>
 <c:if test="${check==0 }">
 	<script>

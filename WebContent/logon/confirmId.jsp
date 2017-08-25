@@ -14,8 +14,8 @@
 
 	<c:if test ="${check==1}">
 
-	<form name = "checkForm" method="post" action="/logon/confirmId.do">
-		<p class="desc"><strong>${id }</strong>은(는) 이미 사용중인 아이디입니다.<br /></p>
+	<form name = "checkForm" method="post" action="./confirmId.do">
+		<p class="desc"><strong> ${id} </strong>은(는) 이미 사용중인 아이디입니다.<br /></p>
 		<div>
 			<input type="text" name="id" maxlength="12" class="inputText" />
 			<input type="submit" value="Check" class="btn" />
@@ -23,7 +23,7 @@
 	</form>
 	</c:if>
 	<c:if test="${check == -1 }">
-	<p class ="desc">입력하신<strong>{$id}</strong>은(는) 사용할 수 있는 아이디입니다.</p>
+	<p class ="desc">입력하신<strong> ${id} </strong>은(는) 사용할 수 있는 아이디입니다.</p>
 		<div><input type="button" value = "Close" onclick="setid()" class ="btn" /></div>
 	</c:if>
 </div>

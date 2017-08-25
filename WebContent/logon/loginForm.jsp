@@ -28,7 +28,7 @@ function begin() {
 </script>
 <div id="loginWrap">
 	<h1>Member Login</h1>
-	<form action="/logon/loginPro.do" method="post" name="myform" onsubmit="return checkIt();">
+	<form action="./loginPro.do" method="post" name="myform" onsubmit="return checkIt();">
 		<fieldset>
 			<legend>·Î±×ÀÎ</legend>
 			<dl>
@@ -40,7 +40,7 @@ function begin() {
 			<div class="btnArea">
 				<input type="submit" name="Submit" value="Ok" />
 				<input type="reset" value="Reset" />
-				<input type="button" value="Join" onclick="javascript:window.location='/logon/inputForm.do'" />
+				<input type="button" value="Join" onclick="javascript:window.location='./inputForm.do'" />
 			</div>
 		</fieldset>
 	</form>

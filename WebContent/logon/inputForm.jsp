@@ -57,7 +57,7 @@
 		}
 		
 		//url과 사용자 입력 id를 조합합니다.
-		url = "/logon/confirmId.do?id="+userinput.id.value;
+		url = "./confirmId.do?id="+userinput.id.value;
 		
 		//새로운 윈도우를 엽니다.
 		open(url,"confirm","toolbar=no, location=no,status=no,menubar=no,scrollbars=no,"
@@ -65,14 +65,14 @@
 	}
 	
 	function zipCheck() {
-		url = "ZipCheck.jsp?check=y";
+		url = "ZipCheck.do?check=y";
 		open(url,"post","toolbar=no, width=500,height=300,directories=no,status=yes,scrollbars=yes,menubar=no");
 	}
 </script>
 <body>
 <div id="joinWrap">
 	<h1>Member Join</h1>
-	<form method="post" action="/logon/inputPro.do" name="userinput" onsubmit="return checkIt()">
+	<form method="post" action="./inputPro.do" name="userinput" onsubmit="return checkIt()">
 		<table>
 			<colgroup>
 				<col width="25%" />
@@ -125,7 +125,7 @@
 		<div class="btnArea">
 			<input type="submit" name="confirm" value="Ok" />
 			<input type="reset" name="reset" value="Reset" />
-			<input type="button" value="Cancel" onclick="javascript:window.location='/logon/main.do'" />
+			<input type="button" value="Cancel" onclick="javascript:window.location='./main.do'" />
 		</div>
 	</form>
 </div>

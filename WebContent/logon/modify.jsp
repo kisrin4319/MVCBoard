@@ -12,19 +12,19 @@
 <table>
 	<tr>
 		<td>
-			<form name = "myform" action ="/logon/modifyForm.do" method="post">
+			<form name = "myform" action ="./modifyForm.do" method="post">
 				<input type="hidden" name ="id" value ="${sessionScope.memId }" />
 				<input type = "submit" value = "회원정보 수정" />			
 			</form>
 		</td>
 		<td>
-			<form name ="myform" action ="/logon/deleteForm.do" method="post">
+			<form name ="myform" action ="./deleteForm.do" method="post">
 				<input type="hidden" name ="id" value ="${sessionScope.memId }" />
 				<input type = "submit" value ="회원 탈퇴" />
 			</form>
 		</td>
 		<td>
-			<form name = "myform" action = "/logon/main.do" method="post">
+			<form name = "myform" action = "./main.do" method="post">
 				<input type ="submit" value ="메인으로" />
 			</form>
 		</td>

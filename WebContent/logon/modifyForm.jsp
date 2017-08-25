@@ -38,7 +38,7 @@ function zipCheck(){
 <body>
 <div id="joinWrap">
 	<h1>Modify</h1>
-	<form action="/logon/modifyPro.do" name = "userinput" method="post" onsubmit="return checkIt()">
+	<form action="./modifyPro.do" name = "userinput" method="post" onsubmit="return checkIt()">
 <table>
 			<colgroup>
 				<col width="25%" />
@@ -97,8 +97,8 @@ function zipCheck(){
 		</table>
 		<div class="btnArea">
 			<input type="submit" value="Ok" />
-			<input type="button" value="Cancel" onclick="javascript:window.location='/logon/main.do'" />
-			<input type="button" value="Member secession" onclick="javascript:window.location='/logon/deleteForm.do'" />
+			<input type="button" value="Cancel" onclick="javascript:window.location='./main.do'" />
+			<input type="button" value="Member secession" onclick="javascript:window.location='./deleteForm.do'" />
 		</div>
 	</form>
 	</div>

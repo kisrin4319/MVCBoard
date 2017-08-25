@@ -14,9 +14,9 @@
 		<h1>Modify</h1>
 		<p class="desc">회원정보가 수정되었습니다.</p>
 		<form>
-			<div class="btnArea2"><input type="button" value="Go to home" onclick="javascript:window.location='/logon/main.do'" class="btn" /></div>
+			<div class="btnArea2"><input type="button" value="Go to home" onclick="javascript:window.location='./main.do'" class="btn" /></div>
 		</form>
-		<p>5초후에 메인으로 이동합니다.<meta http-equiv="Refresh" content="5;url=/logon/main.do" ></p>
+		<p>5초후에 메인으로 이동합니다.<meta http-equiv="Refresh" content="5;url=./main.do" ></p>
 	</div>
 </div>
 </body>

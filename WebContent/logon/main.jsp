@@ -13,7 +13,7 @@
 <c:if test="${empty sessionScope.memId }">
 <div id="LoginWrap">
        <h1>Member Login</h1>
-       <form name="inform" method="post" action="/logon/loginPro.do" onSubmit="return checkIt();">
+       <form name="inform" method="post" action="./loginPro.do" onSubmit="return checkIt();">
           <fieldset>
              <legend>로그인</legend>
              <dl>
@@ -28,9 +28,9 @@
              </dl>
              <div class="btnArea">
                 <input type ="submit" name  = "Submit" value="Ok" />
-                <input type ="button" value = "Join" onclick="javascript:window.location='/logon/inputForm.do'" />
-                <input type ="button" value = "Find id" onclick="javascript:window.location='/logon/findIdForm.do'" />
-                <input type ="button" value = "Find pw" onclick="javascript:window.location='/logon/findPwForm.do'" />
+                <input type ="button" value = "Join" onclick="javascript:window.location='./inputForm.do'" />
+                <input type ="button" value = "Find id" onclick="javascript:window.location='./findIdForm.do'" />
+                <input type ="button" value = "Find pw" onclick="javascript:window.location='./findPwForm.do'" />
              </div>
           </fieldset>
        </form>
@@ -44,10 +44,10 @@
           <p>
              <strong>${ sessionScopte.memId}</strong>님 환영합니다.
           </p>
-       <form action="/logon/logout.do" method="post">
+       <form action="./logout.do" method="post">
              <div class="btnArea">
                 <input type ="submit" name = "Submit" value="Logout" />
-                <input type ="button" value = "Modify" onclick="javascript:window.location='/logon/modifyForm.do'" />
+                <input type ="button" value = "Modify" onclick="javascript:window.location='./modifyForm.do'" />
              </div>
           </form>
     </div>
