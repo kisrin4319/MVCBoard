@@ -4,13 +4,13 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
 <title>게시판</title>
-<link href="./MVC/style.css" rel="stylesheet" type="text/css">
-<script type="text/javascript" src ="./MVC/script.js"></script>
+<link href="./css/style.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src ="./script.js"></script>
 </head>
 <body>
 <div id ="wrap">
 	<div id = "header"><h1>글삭제</h1></div>
-	<form method="post" name ="delForm" action="/MVC/deletePro.do?pageNum=${pageNum }" onsubmit="return deleteSave()">
+	<form method="post" name ="delForm" action="./deletePro.do?pageNum=${pageNum }" onsubmit="return deleteSave()">
 		<input type="hidden" name ="num" value = "${num }" />
 		<div id = "content">
 			<div class = "delForm">
@@ -23,7 +23,7 @@
 		</div>
 		<div id = "footer" class ="deleteBtn">
 			<input type="submit" value="글삭제"/>
-			<input type="button" value ="글목록" onclick="document.location.href='/MVC/list.do?pageNum=${pageNum}'" />
+			<input type="button" value ="글목록" onclick="document.location.href='./list.do?pageNum=${pageNum}'" />
 		</div>
 	</form>
 </div>

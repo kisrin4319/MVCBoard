@@ -1,3 +1,3 @@
 <%@ page language="java" contentType="text/html; charset=euc-kr" pageEncoding="euc-kr"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<meta http-equiv="Refresh" content="0;url=./list.do" />
+<c:redirect url = "${url }" />

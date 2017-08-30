@@ -20,6 +20,7 @@ public class DeleteProAction implements CommandAction {
 		
 		request.setAttribute("pageNum", new Integer(pageNum));
 		request.setAttribute("check", new Integer(check));
+		System.out.println(check);
 		return "/MVC/deletePro.jsp";
 	}
 

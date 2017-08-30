@@ -2,7 +2,9 @@
 <%@ page language="java" contentType="text/html; charset=euc-kr" pageEncoding="euc-kr"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <c:if test="${check==1 }">
-<meta http-equiv="Refresh" content ="0;url=/MVC/list.do?pageNum=${pageNum }"/>
+<script type="text/javascript">
+	location.href = "list.do?pageNum=${pageNum}";
+</script>
 </c:if>
 <c:if test="${check==0 }">
 비밀번호가 다릅니다.

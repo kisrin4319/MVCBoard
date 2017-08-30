@@ -38,6 +38,7 @@ public class ControllerUsingURI extends HttpServlet {
 			if(f!=null) try {f.close(); } catch (IOException ex) {}
 		}
 		Iterator keyIter = pr.keySet().iterator(); //Iterator∞¥√º¥¬ Enumeration∞¥√º∏¶ »Æ¿ÂΩ√≈≤ ∞≥≥‰¿« ∞¥√º
+		
 		while(keyIter.hasNext()) {
 			String command = (String)keyIter.next();
 			String className = pr.getProperty(command);
@@ -77,13 +78,11 @@ public class ControllerUsingURI extends HttpServlet {
 			if(com == null) {
 				com = new NullAction();
 			}
-			view = com.requestPro(request,response);
+			view = com.requestPro(request, response);
 		} catch (Throwable e) {
 			throw new ServletException(e);
 		}
 		RequestDispatcher dispatcher = request.getRequestDispatcher(view);
-		dispatcher.forward(request, response);
-		
+		dispatcher.forward(request, response);	
 	}
-
 }

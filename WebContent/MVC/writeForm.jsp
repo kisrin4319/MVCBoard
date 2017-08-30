@@ -5,13 +5,13 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
 <title>게시판</title>
-<link href="./MVC/style.css" rel="stylesheet" type="text/css">
+<link href="./style.css" rel="stylesheet" type="text/css">
 <script type="text/javascript" src="MVC/script.js"></script>
 </head>
 <body>
 	<div id="wrap">
 		<div id ="header"><h1>글작성</h1></div>
-		<form method="post" name="writeform" action="/MVC/writePro.do" onsubmit="return writeSave()">
+		<form method="post" name="writeform" action="./writePro.do" onsubmit="return writeSave()">
 			<input type="hidden" name="num" value="${num }">
 			<input type="hidden" name="ref" value="${ref }">
 			<input type="hidden" name="re_step" value="${re_step }">
@@ -64,7 +64,7 @@
 				<div id = "footer">
 					<input type="submit" value="글쓰기" />
 					<input type="reset" value="다시작성" />
-					<input type="button" value="목록보기" OnClick="window.location='list.jsp'" />
+					<input type="button" value="목록보기" OnClick="window.location='./list.do'" />
 				</div>
 			</form>
 		</div>

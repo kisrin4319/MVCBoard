@@ -6,7 +6,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <title>게시판</title>
-<link href="./style.css" rel="stylesheet" type="text/css" />
+<link href="./css/style.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
 	<div id="wrap">
@@ -40,34 +40,30 @@
 					<th>IP</th>
 				</tr>
 
-				<tr class="listCon">
 				<c:forEach var = "article" items = "${articleList }" >
-					<td><c:out value = "${number }" />
+				<tr class="listCon">				
+					<td>
+						<c:out value = "${number }" />
 						<c:set var="number" value = "${number -1 }" />
-						</td>
-					<td class="subject">
-				
+					</td>					
+					<td class="subject">				
 					<c:if test ="${ article.re_level > 0}">
-					<img src="images/level.gif" width="${5*article.re_level }" height="16">
-						<img src = "images/re.gif">
+					&nbsp;&nbsp;<span class = "reply">&nbsp;[re]</span>
 					</c:if>
-					<c:if test="${article.re_level ==0 }">
-						<img src="images/level.gif" width="${5*article.re_level }" height="16">
-					</c:if>
-					
-					<a href="/MVC/content.do?num=${article.num }&pageNum=${currentPage}">
-						${article.subject }</a>
+					<c:if test=""></c:if>
+					<a href="./content.do?num=${article.num }&pageNum=${currentPage}">${article.subject }</a>				
 					<c:if test="${article.readcount>=20 }">
-						<img src="images/hot.gif" border ="0" height="16">
+						<span class = "icoHot">Hit</span>
 					</c:if>
-				</td>
-					<td align="center" width = "100">
+					</td>
+					<td>
 						<a href="mailto:${article.email }">${article.writer }</a>
 					</td>
-					<td align="center" width="150">${article.readcount }</td>
-					<td align="center" width ="100">${article.ip }</td>
-				</c:forEach>
+					<td>${article.reg_date }</td>
+					<td>${article.readcount }</td>
+					<td>${article.ip }</td>
 				</tr>
+				</c:forEach>
 			</table>
 		</c:if>
 		<c:if test="${count>0 }">
@@ -84,21 +80,21 @@
 			<div class="paging">
 			
 				<c:if test="${startPage >10 }">
-					<a href="/MVC/list.do?pageNum=${startPage-10 }">[이전]</a>
+					<a href="./list.do?pageNum=${startPage-10 }">[이전]</a>
 				</c:if>
 				<ol>	
 					<c:forEach var = "i" begin = "${startPage }" end="${endPage }">
-					<li><a href ="/MVC/list.do?pageNum=${i }">[${i }]</a></li>
+					<li><a href ="./list.do?pageNum=${i }">[${i }]</a></li>
 					</c:forEach>					
 				</ol>
 				<c:if test="${endPage < pageCount }">
-					<a href="/MVC/list.do?pageNum=${startPage+10 }">[다음]</a>
+					<a href="./list.do?pageNum=${startPage+10 }">[다음]</a>
 				</c:if>				
 			</div>
 		</div>
 		
 		<div id="footer">
-			<input type ="button" value="글쓰기"	onclick="javascript:window.location.href='/MVC/writeForm.do'" />	
+			<input type ="button" value="글쓰기"	onclick="javascript:window.location.href='./writeForm.do'" />	
 		</div>
 	</div>
 </body>

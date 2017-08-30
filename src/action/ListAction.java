@@ -7,6 +7,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import board.BoardDBBean;
+import board.CommentDBBean;
 
 public class ListAction implements CommandAction {
 
@@ -14,7 +15,6 @@ public class ListAction implements CommandAction {
 	public String requestPro(HttpServletRequest request, HttpServletResponse response) throws Throwable {
 	
 		String pageNum = request.getParameter("pageNum"); //페이지번호
-		
 		if(pageNum == null) {
 			pageNum = "1";
 		}

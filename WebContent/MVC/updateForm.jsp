@@ -1,18 +1,16 @@
-<?xml version="1.0" encoding="euc-kr" ?>
 <%@ page language="java" contentType="text/html; charset=euc-kr" pageEncoding="euc-kr"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
 <head>
-<title>Insert title here</title>
-<link href="./MVC/style.css" rel="stylesheet" type="text/css" />
-<script type="text/javascript" src="js/script.js" />
 <meta http-equiv="Content-Type" content="text/html; charset=euc-kr" />
+<title>글수정</title>
+<link href="./css/style.css" rel="stylesheet" type="text/css" >
+<script type="text/javascript" src="./script/script.js" ></script>
 </head>
 <body>
-<div id = "wrap">
+<div id ="wrap">
 	<div id = "header"><h1>글수정</h1></div>
-		<form method="post" name="writeform" action="/MVC/updatePro.do?pageNum=${pageNum}" onsubmit="return writeSave()">
+		<form method="post" name="writeform" action="./updatePro.do?pageNum=${pageNum}" onsubmit="return writeSave()">
 			<div id="content">
 			<table>
 				<colgroup>
@@ -22,7 +20,7 @@
 				<tr>
 					<th>작성자</th>
 					<td>
-					<input type="text" name="writer" value="${article.Writer}" />
+					<input type="text" name="writer" value="${article.writer}" />
 						<input type="hidden" name="num" value="${article.num}" />
 					</td>
 				</tr>
@@ -50,7 +48,7 @@
 			<div id ="footer">
 				<input type="submit" value="글수정" />
 				<input type="reset"  value="다시작성" />
-				<input type="button" value="목록보기" onclick="document.location.href='/MVC/list.do?pageNum=${pageNum}'" />
+				<input type="button" value="목록보기" onclick="document.location.href='./list.do?pageNum=${pageNum}'" />
 			</div>
 		</form>
 	</div>

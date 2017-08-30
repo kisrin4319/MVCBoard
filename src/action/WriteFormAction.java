@@ -24,6 +24,7 @@ public class WriteFormAction implements CommandAction {
 		request.setAttribute("ref", new Integer(ref));
 		request.setAttribute("re_step", new Integer(re_step));
 		request.setAttribute("re_level", new Integer(re_level));
+		
 		return "/MVC/writeForm.jsp";
 	}
 
