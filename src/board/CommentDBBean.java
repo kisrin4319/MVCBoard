@@ -6,7 +6,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.ArrayList;
 
-import web.jdbc.JdbcUtil;
+import jdbc.JdbcUtil;
 
 public class CommentDBBean {
 

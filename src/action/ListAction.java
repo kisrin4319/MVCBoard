@@ -25,7 +25,7 @@ public class ListAction implements CommandAction {
 		int endRow =currentPage * pageSize; //한 페이지의 마지막 글 번호
 		int count = 0;
 		int number = 0;
-		
+		int prePage = Integer.parseInt(pageNum);
 		List articleList = null;
 		BoardDBBean dbPro = BoardDBBean.getInstance();
 		count = dbPro.getArticleCount(); // 전체 글의 수
@@ -44,7 +44,7 @@ public class ListAction implements CommandAction {
 		request.setAttribute("pageSize", new Integer(pageSize));
 		request.setAttribute("number", new Integer(number));
 		request.setAttribute("articleList", articleList);
-		
+		request.setAttribute("prePage", prePage);
 		return "/MVC/list.jsp";
 	}
 

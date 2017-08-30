@@ -5,7 +5,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
 <title>게시판</title>
-<link href="./style.css" rel="stylesheet" type="text/css">
+<link href="./css/style.css" rel="stylesheet" type="text/css">
 <script type="text/javascript" src="MVC/script.js"></script>
 </head>
 <body>

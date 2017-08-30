@@ -5,8 +5,8 @@
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
+<link href = "./css/style.css" rel = "stylesheet" type="text/css"/>
 <title>게시판</title>
-<link href="./css/style.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
 	<div id="wrap">
@@ -39,8 +39,9 @@
 					<th>조 회</th>
 					<th>IP</th>
 				</tr>
-
+			
 				<c:forEach var = "article" items = "${articleList }" >
+				
 				<tr class="listCon">				
 					<td>
 						<c:out value = "${number }" />
@@ -64,7 +65,7 @@
 					<td>${article.ip }</td>
 				</tr>
 				</c:forEach>
-			</table>
+			</table>		
 		</c:if>
 		<c:if test="${count>0 }">
 			<c:set var = "pageCount" value = "${count / pageSize + (count %pageSize ==0 ? 0 :1)}" />

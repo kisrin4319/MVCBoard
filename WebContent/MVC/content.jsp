@@ -46,7 +46,7 @@
 				<input type="button" value ="글수정" onclick="document.location.href='./updateForm.do?num=${article.num}&pageNum=${pageNum}'" /> <!-- updateForm.jsp로 해당페이지 전달 -->
 				<input type="button" value ="글삭제" onclick="document.location.href='./deleteForm.do?num=${article.num}&pageNum=${pageNum}'" /> <!-- deleteForm.jsp로 해당페이지 전달 -->
 				<input type="button" value ="답글쓰기" onclick="document.location.href='./writeForm.do?num=${article.num}&ref=${article.ref}&re_step=${article.re_step}&re_level=${article.re_level}'" /> <!-- writeForm.jsp로 해당페이지 전달 -->
-				<input type="button" value ="글목록" onclick="document.location.href='./list.do?pageNum=${pageNum}'" />
+				<input type="button" value ="글목록" onclick="document.location.href='./list.do'" />
 			</div>		
 	</form>
 
